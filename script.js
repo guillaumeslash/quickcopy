@@ -1,5 +1,5 @@
 
-const URLParams = window.location.search;
+const URLParams = window.location.search.substring(1);
 const decodedURLParams = decodeURI(URLParams);
 
 document.getElementById("text").innerHTML = decodedURLParams;
