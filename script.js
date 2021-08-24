@@ -1,6 +1,6 @@
 
 const URLParams = window.location.search.substring(1);
-const decodedURLParams = decodeURI(URLParams);
+const decodedURLParams = decodeURIComponent(URLParams).replace(/_/g, " ");
 
 document.getElementById("text").innerHTML = decodedURLParams;
 
