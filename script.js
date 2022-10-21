@@ -2,7 +2,7 @@
 const URLParams = window.location.search.substring(1);
 const decodedURLParams = decodeURIComponent(URLParams).replace(/_/g, " ");
 
-document.getElementById("text").innerHTML = decodedURLParams;
+document.getElementById("text").innerHTML = decodedURLParams + "\n\nReplay sur YouTube : https://www.youtube.com/channel/UCNOUTy_TWRJzAaSfIGserkg";
 
 const redirect = () => {
   copyTextToClipboard(decodedURLParams);
