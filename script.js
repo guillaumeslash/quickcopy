@@ -1,11 +1,12 @@
 
 const URLParams = window.location.search.substring(1);
 const decodedURLParams = decodeURIComponent(URLParams).replace(/_/g, " ");
+const finalTextToCopy = decodedURLParams + "\n\nReplay sur YouTube : https://www.youtube.com/channel/UCNOUTy_TWRJzAaSfIGserkg";
 
-document.getElementById("text").innerHTML = decodedURLParams + "\n\nReplay sur YouTube : https://www.youtube.com/channel/UCNOUTy_TWRJzAaSfIGserkg";
+document.getElementById("text").innerHTML = finalTextToCopy;
 
 const redirect = () => {
-  copyTextToClipboard(decodedURLParams);
+  copyTextToClipboard(finalTextToCopy);
   document.getElementById("button").innerHTML = "Copié ! Redirection dans 1 sec..."
   window.open("https://www.youtube.com/c/Nowtech/community");
 }
